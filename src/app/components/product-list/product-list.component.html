@@ -1,0 +1,83 @@
+<div class="product-container">
+
+  <h1>Product Details — CRUD</h1>
+
+  <!-- ═══════════ FORM SECTION ═══════════ -->
+  <section class="form-card">
+    <h2>{{ isEditMode ? 'Edit Product' : 'Add New Product' }}</h2>
+
+    <form (ngSubmit)="onSubmit()">
+
+      <div class="form-row">
+        <label for="productName">Product Name</label>
+        <input id="productName" type="text"
+               [(ngModel)]="productName" name="productName"
+               placeholder="e.g. Wireless Mouse" required />
+      </div>
+
+      <div class="form-row">
+        <label for="productDescription">Description</label>
+        <input id="productDescription" type="text"
+               [(ngModel)]="productDescription" name="productDescription"
+               placeholder="Short product description" />
+      </div>
+
+      <div class="form-row">
+        <label for="productPrice">Price (USD)</label>
+        <input id="productPrice" type="number" step="0.01" min="0"
+               [(ngModel)]="productPrice" name="productPrice"
+               placeholder="e.g. 19.99" required />
+      </div>
+
+      <div class="form-row">
+        <label for="productStock">Stock</label>
+        <input id="productStock" type="number" min="0"
+               [(ngModel)]="productStock" name="productStock"
+               placeholder="e.g. 25" required />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">
+          {{ isEditMode ? 'Update Product' : 'Add Product' }}
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- ═══════════ TABLE SECTION ═══════════ -->
+  <section class="table-card">
+    <h2>Product List</h2>
+
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price | number:'1.2-2' }}</td>
+          <td>{{ product.stock }}</td>
+          <td class="actions-cell">
+            <button class="btn btn-edit" (click)="onEditProduct(product)">Edit</button>
+            <button class="btn btn-delete" (click)="onDeleteProduct(product.id)">Delete</button>
+          </td>
+        </tr>
+        <tr *ngIf="productList.length === 0">
+          <td colspan="6" class="empty-row">No products found. Add one above!</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
