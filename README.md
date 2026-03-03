@@ -1,59 +1,66 @@
-# ProductCrud
+# 🛒 Product Management System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+A simple and efficient **Product Management Application** that displays product details in a structured **table format** and performs complete **CRUD (Create, Read, Update, Delete)** operations using REST APIs.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📌 Project Overview
 
-```bash
-ng serve
-```
+This application allows users to manage products through a clean UI interface.  
+All product details are displayed in a table format with real-time updates after each operation.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## ✨ Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- 📋 View all products in table format
+- ➕ Add new product
+- ✏️ Update existing product
+- ❌ Delete product
+- 🔄 Real-time UI updates
 
-```bash
-ng generate component component-name
-```
+- ✅ Form validation & error handling
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🧱 Tech Stack
 
-## Building
+### 🔹 Frontend
+- Angular
+- TypeScript
+- HTML
+- CSS
+- RxJS
 
-To build the project run:
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 📊 Product Table Format
 
-## Running end-to-end tests
+The table displays:
 
-For end-to-end (e2e) testing, run:
+- Product Name  
+- Description
+- price  
+- Quantity  
+- Action Buttons (Edit / Delete)
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🏗️ Project Structure
+---
 
-## Additional Resources
+<img width="384" height="394" alt="image" src="https://github.com/user-attachments/assets/f37bc0d3-07db-451b-8000-1b2f81c27d2e" />
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+---
+
+## Output:
+
+----
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e6c1a13a-2312-4082-a6f4-33991b548793" />
+
